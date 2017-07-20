@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
-const port = process.env.PORT || 3000;
+app.set('port',(process.env.PORT || 3000));
 
 //app.get('/', function(req, resp){
     //resp.send('Hello world from index.js');
@@ -62,6 +62,6 @@ app.put('/updateContact/:id', function(req, resp){
     });
 });
 
-app.listen(port);
+app.listen(app.get('port'));
 
-console.log('Sever running : http://localhost:'+port);
+console.log('Sever running : http://localhost:'+app.get('port'));
