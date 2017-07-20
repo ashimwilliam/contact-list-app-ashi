@@ -12,5 +12,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongojs": "^2.4.0"
+  },
+  "engines": {
+      "node": "7.10.1"
   }
 }
